@@ -1,0 +1,7 @@
+- name: change host name 
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: change hostname 
+      command: hostnamectl set-hostname <enter-name>
